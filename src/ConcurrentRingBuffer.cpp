@@ -15,7 +15,8 @@ private:
     std::condition_variable not_full;
 
 public:
-    explicit ConcurrentRingBuffer(size_t capacity) : capacity(capacity), head(0), tail(0) {
+    explicit ConcurrentRingBuffer(size_t capacity) : capacity(capacity), 
+    head(0), tail(0) {
         data = std::make_unique<T[]>(capacity);
     }
 
